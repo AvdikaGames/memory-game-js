@@ -26,9 +26,9 @@ function createCardArray() {
       )
     }
   }
+  cardArray.sort(() => 0.5 - Math.random());
 }
 
-cardArray.sort(() => 0.5 - Math.random());
 
 function createBoard() {
   for (let i = 0; i < cardArray.length; i++) {
