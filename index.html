@@ -6,11 +6,15 @@
     <link rel="stylesheet" href="styles.css" type="text/css"></link>
   </head>
   <body>
-    <select name="cards" id="difficalty">
-      <option value="">Choose difficalty</option>
-      <option value="6">Easy</option>
-      <option value="12">Hard</option>
-    </select>
+    <h3>Choose your difficulty</h3>
+    <div>
+      <input type="radio" name="difficulty" id="easy" value="6">
+      <label for="easy">Easy</label>
+    </div>
+    <div>
+      <input type="radio" name="difficulty" id="hard" value="12">
+      <label for="hard">Hard</label>
+    </div>
     <h3>Pair of cards left: <span id="result"></span></h3>
 
     <div id="grid">

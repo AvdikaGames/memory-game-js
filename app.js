@@ -1,11 +1,16 @@
 let cardAmmount = 6;
-const diffLevelSelect = document.getElementById('difficalty').addEventListener('change', function () {
-  cardAmmount = +this.value
-  cardArray.length = 0;
-  clearGrid();
-  createCardArray();
-  createBoard();
-  return
+
+const radios = document.querySelectorAll('input[name="difficulty"]');
+radios.forEach(function (radio) {
+  radio.addEventListener('change', function () {
+    if (this.checked) {
+      cardAmmount = +this.value;
+      cardArray.length = 0;
+      clearGrid();
+      createCardArray();
+      createBoard();
+    }
+  });
 });
 
 const gridDisplay = document.querySelector('#grid');
@@ -77,7 +82,7 @@ function flipCard() {
 
 function clearGrid() {
   const childs = gridDisplay.querySelectorAll('img');
-    childs.forEach((child) => child.remove());
+  childs.forEach((child) => child.remove());
 }
 
 createCardArray();
